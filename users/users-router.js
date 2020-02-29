@@ -50,7 +50,7 @@ router.post('/', (req, res) => {
     Users
     .update(userData, req.params.id)
     .then(user=>{
-        res.status(200).json(user, {messsage: 'Updated Successfully!'});
+        res.status(200).json({messsage: 'Updated Successfully!'});
     })
     .catch(err=>{
         res.status(404).json({ message: 'Failed to update User.'})
