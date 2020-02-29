@@ -110,3 +110,119 @@ Users can login to their accounts by hitting this endpoint with USERNAME & PASSW
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo1LCJ1c2VybmFtZSI6ImJyYW5keSIsImlhdCI6MTU4MjkzODY1NH0.Gtsg2N4nMz" (fake token)
 }
 ```
+
+***
+
+# *POSTS*
+## GET: /api/posts
+`https://comake2.herokuapp.com/api/posts`
+
+This endpoint will retrieve all Post Data!
+```
+[{
+    "id": 1,
+    "created_at": "2020-02-27 12:00:00",
+    "creator_id": 1,
+    "title": "Down Power Lines",
+    "desc": "On Main Street, there's a few down Power Lines from the storm the other night blocking the main roads.",
+    "upvotes": 10,
+    "downvotes": 3,
+    "resolved": "false"
+  },
+  {
+    "id": 3,
+    "created_at": "2020-02-28 5:00:00",
+    "creator_id": 1,
+    "title": "Power Outage",
+    "desc": "Power Outage on Justice Street, the whole streets out of power. ",
+    "upvotes": 8,
+    "downvotes": 0,
+    "resolved": "true"
+  }]
+```
+
+***
+
+# *POSTS*
+## GET: /api/posts/:id
+`https://comake2.herokuapp.com/api/posts/2`
+
+This endpoint will retrieve a specific posts data.
+```
+[
+  {
+    "id": 2,
+    "created_at": "2020-02-28 3:00:00",
+    "creator_id": 2,
+    "title": "Pot Hole Alert",
+    "desc": "Pothole on McDonalds lane, just blew a tire driving over it!",
+    "upvotes": 5,
+    "downvotes": 2,
+    "resolved": "false"
+  }
+]
+```
+
+***
+
+# *POSTS*
+## POST: /api/posts/
+`https://comake2.herokuapp.com/api/posts`
+
+This endpoint will let you add new Posts to the DataBase! You have to be logged in to create a post.
+
+creator_id should be dynamically included in the request body based on logged in user.
+
+```
+[
+  {
+    "creator_id" : 1,
+    "title": "Pot Hole Alert",
+    "desc": "Pothole on McDonalds lane, just blew a tire driving over it!",
+    "upvotes": 5,
+    "downvotes": 2,
+    "resolved": "false"
+  }
+]
+```
+
+***
+
+
+# *POSTS*
+## PUT: /api/posts/:id
+`https://comake2.herokuapp.com/api/posts/1`
+
+This endpoint will let you edit posts.
+
+```
+
+  Example: /api/posts/1
+
+    {
+    "title": "Down Power Lines",
+    "desc": "On Main Street, there's a few down Power Lines from the storm the other night blocking the main roads.",
+    "resolved": "true"
+  }
+
+```
+
+***
+
+# *POSTS*
+## DELETE: /api/posts/:id
+`https://comake2.herokuapp.com/api/posts/7`
+
+This endpoint will let you delete posts.
+
+```
+
+  Example: /api/posts/7
+
+  {
+  "message": "The Post has been deleted."
+  }
+
+```
+
+***
