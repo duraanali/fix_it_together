@@ -11,8 +11,8 @@ function validateUser(user){
     }
     
 
-    if(!user.password || user.password.length < 5){
-    errors.push('Your Password must be a minimum of 5 characters long.')
+    if(!user.password || user.password.length < 4){
+    errors.push('Your Password must be a minimum of 4 characters long.')
     }
     
 

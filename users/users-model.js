@@ -10,16 +10,19 @@ module.exports = {
 };
 
 function find() {
-    return db('users').select('id', 'username', 'created_at');
+    return db('users')
+    .select('id', 'username', 'created_at');
 }
 
 function findBy(filter) {
-    return db('users').where(filter)
+    return db('users')
+    .where(filter)
     .first();
 }
 
 function findById(id) {
-    return db('users').select('id', 'username', 'created_at')
+    return db('users')
+    .select('id', 'username', 'created_at')
     .where({ id })
     .first();
 }
