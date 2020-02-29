@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const Users = require('./users-model.js');
+const Posts = require('../posts/posts-model.js')
 
 //GET a list of Users
 //GET /users/
@@ -11,16 +12,22 @@ router.get('/', (req, res) => {
  .catch(err => res.send(err));
 });
 
+
 //GET a specific Users ID
 //GET /users/:id
-router.get('/:id', (req, res) => {
-    Users
-    .findById(req.params.id)
-    .then(user => res.status(200).json(user))
-    .catch(err => {
-        res.status(404).json({ message: 'User not Found, Failed to GET User ID.', err });
-      });
+router.get('/:id', async (req, res) => {
+  const userId = req.params.id
+  try{
+    const user = await Users.findById(userId)
+    const posts = await Posts.findPostsByUserId(userId)
+    user.posts = posts
+    res.status(200).json(user)
+  }
+   catch(err) {
+      res.status(404).json({ message: 'User not Found, Failed to GET User ID.', err });
+    };
 })
+
 
 //POST a User
 //POST /users

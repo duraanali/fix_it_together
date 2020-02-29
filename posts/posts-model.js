@@ -5,7 +5,8 @@ module.exports = {
     find,
     findById,
     update,
-    remove
+    remove,
+    findPostsByUserId
 }
 
 //Find Posts
@@ -21,6 +22,14 @@ function findById(id) {
     .where({id})
     .select('id', 'created_at', 'creator_id', 'title', 'desc', 'upvotes', 'downvotes', 'resolved')
     .orderBy('upvotes', 'desc')
+}
+
+//Find posts by user id
+async function findPostsByUserId(id){
+    return await db('posts')
+    .join('users', 'posts.creator_id', 'users.id')
+    .where('users.id', id)
+    .select('posts.id', 'posts.created_at', 'posts.creator_id', 'posts.title', 'posts.desc', 'posts.upvotes', 'posts.downvotes', 'posts.resolved')
 }
 
 //Add Users Post

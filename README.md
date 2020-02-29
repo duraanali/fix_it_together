@@ -38,14 +38,26 @@ Will retrieve a list of ALL users.
 ## GET: /api/users/:id
 `https://comake2.herokuapp.com/api/users/1`
 
-Will retrieve that specified User
+Will retrieve that specified Users information AND any posts that Users created.
 ```
 Example: /api/users/1
 Returns: 
 {
   "id": 1,
   "username": "superman",
-  "created_at": "2020-02-29 00:30:00"
+  "created_at": "2020-02-29 00:30:00",
+  "posts": [
+    {
+      "id": 1,
+      "created_at": "2020-02-27 12:00:00",
+      "creator_id": 1,
+      "title": "Down Power Lines222222",
+      "desc": "On Main Street, there's a few down Power Lines from the storm the other night blocking the main roads.",
+      "upvotes": 10,
+      "downvotes": 3,
+      "resolved": "true"
+    }
+  ]
 }
 ```
 
