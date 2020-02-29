@@ -32,7 +32,7 @@ router.post('/', (req, res) => {
       res.status(201).json(user);
     })
     .catch (err => {
-      res.status(404).json({ message: 'Failed to POST to /users' });
+      res.status(404).json({ message: 'Failed to POST to /users.' });
     });
   });
 
@@ -43,10 +43,10 @@ router.post('/', (req, res) => {
     Users
     .update(userData, req.params.id)
     .then(user=>{
-        res.status(200).json(user);
+        res.status(200).json(user, {messsage: 'Updated Successfully!'});
     })
     .catch(err=>{
-        res.status(404).json({ message: 'Failed to UDATE User'})
+        res.status(404).json({ message: 'Failed to update User.'})
     })
   })
 

@@ -51,6 +51,22 @@ Returns:
 
 ***
 
+# *EDIT A SPECIFIC USER*
+## PUT: /api/users/:id
+`https://comake2.herokuapp.com/api/users/1`
+
+Will edit & update that specified Users information. (Ex. Username, Password, etc)
+```
+Example: /api/users/1
+Returns: 
+{
+  "id" : 1,
+  "username" : "superman"
+}
+```
+
+***
+
 # *DELETE A SPECIFIC USER*
 ## DELETE: /api/users/:id
 `https://comake2.herokuapp.com/api/users/1`
@@ -71,6 +87,9 @@ Returns:
 `https://comake2.herokuapp.com/api/auth/register`
 
 Users can create accounts by hitting this endpoint. USERNAME and PASSWORD are required.
+
+Usernames MUST be at LEAST 3 characters long. Usernames MUST be Unique (No 2 people can have the same Username).
+Passwords MUST be at LEAST 4 characters long. 
 ```
 {
     "username": "brandy",
