@@ -2,7 +2,7 @@
 Note: Passwords will never be returned for Safety Reasons. All passwords are hashed for the utmost security. 
 
 # *API OFFLINE/ONLINE*
-### GET: /
+## GET: /
 `https://comake2.herokuapp.com/`
 
 A single "/" will redirect you to a message if the API is running:
@@ -13,7 +13,7 @@ A single "/" will redirect you to a message if the API is running:
 ***
 
 # *USERS LIST*
-### GET: /api/users
+## GET: /api/users
 `https://comake2.herokuapp.com/api/users`
 
 Will retrieve a list of ALL users.
@@ -35,7 +35,7 @@ Will retrieve a list of ALL users.
 ***
 
 # *SPECIFIC USER*
-### GET: /api/users/:id
+## GET: /api/users/:id
 `https://comake2.herokuapp.com/api/users/1`
 
 Will retrieve that specified User
@@ -52,7 +52,7 @@ Returns:
 ***
 
 # *DELETE A SPECIFIC USER*
-### DELETE: /api/users/:id
+## DELETE: /api/users/:id
 `https://comake2.herokuapp.com/api/users/1`
 
 Will delete that specified User
@@ -67,7 +67,7 @@ Returns:
 ***
 
 # *REGISTER*
-### POST: /api/auth/register
+## POST: /api/auth/register
 `https://comake2.herokuapp.com/api/auth/register`
 
 Users can create accounts by hitting this endpoint. USERNAME and PASSWORD are required.
@@ -81,7 +81,7 @@ Users can create accounts by hitting this endpoint. USERNAME and PASSWORD are re
 ***
 
 # *LOGIN*
-### POST: /api/auth/login
+## POST: /api/auth/login
 `https://comake2.herokuapp.com/api/auth/login`
 
 Users can login to their accounts by hitting this endpoint with USERNAME & PASSWORD. User will recieve a message from the BackEnd saying "Welcome, {username}!", along with their token.
