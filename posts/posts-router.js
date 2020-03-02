@@ -8,7 +8,7 @@ const path = require('path');
 //Multer DiskStorage (where to store)
 const storage = multer.diskStorage({
   destination: (req,file,cb)=>{
-    cb(null, './public/uploads')
+    cb(null, './posts/public/uploads')
   },
   filename: (req, file, cb) => {
     const id = req.params.id;
@@ -29,19 +29,21 @@ router.post('/:id/image', upload.single('image'), function(req,res,next){
     return next();
   }
   res.json({
-    Url: `https://comake2.herokuapp.com/api/posts/${id}/image/` +
-            req.file.filename
+    Url: `https://comake2.herokuapp.com/api/posts/${id}/image/`
   })
+  // const changes = {'image' : `${}`} 
 })
+
+//public\uploads\issue-1.jpg
 
 //Multer GET
 router.get('/:id/image', (req,res)=>{
-  const id = req.params.is;
+  const id = req.params.id;
   res.sendFile(
-    path.join(__dirname, `../public/uploads/issue-${id}.jpg`)
+    path.join(__dirname, `/public/uploads/issue-${id}.jpg`)
   )
 })
-
+//----------------------------------------------------------------------
 //GET a list of Posts
 //GET /posts/
 router.get('/', (req, res) => {
