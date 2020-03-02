@@ -1,5 +1,5 @@
 # Co-Make API
-Note: Passwords will never be returned for Safety Reasons. All passwords are hashed for the utmost security. 
+Note: Passwords will never be returned for Safety Reasons.  
 
 # *API OFFLINE/ONLINE*
 ## GET: /
