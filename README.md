@@ -107,6 +107,18 @@ Passwords MUST be at LEAST 4 characters long.
     "username": "brandy",
     "password":"candy"
   }
+
+Available Fields:
+{
+  username: "", 
+  password: "", 
+  first_name:"", 
+  last_name:"", 
+  email:"", 
+  zipcode: "", 
+  city:"", 
+  state:""}
+
 ```
 
 ***
