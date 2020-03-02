@@ -12,7 +12,7 @@ module.exports = {
 //Find Posts
 function find(){
     return db("posts")
-    .select('id', 'created_at', 'creator_id', 'title', 'desc', 'upvotes', 'downvotes', 'resolved')
+    .select('id', 'created_at', 'creator_id', 'title', 'desc', 'upvotes', 'downvotes', 'resolved', 'zipcode', 'city', 'state')
     .orderBy('upvotes', 'desc')
 }
 
@@ -20,7 +20,7 @@ function find(){
 function findById(id) {
     return db('posts')
     .where({id})
-    .select('id', 'created_at', 'creator_id', 'title', 'desc', 'upvotes', 'downvotes', 'resolved')
+    .select('id', 'created_at', 'creator_id', 'title', 'desc', 'upvotes', 'downvotes', 'resolved', 'zipcode', 'city', 'state')
     .orderBy('upvotes', 'desc')
 }
 
@@ -39,7 +39,7 @@ function add(user){
     .then(ids => {
         const [id] = ids;
         return db("posts")
-        .select('id', 'created_at', 'creator_id', 'title', 'desc', 'upvotes', 'downvotes', 'resolved')
+        .select('id', 'created_at', 'creator_id', 'title', 'desc', 'upvotes', 'downvotes', 'resolved', 'zipcode', 'city', 'state')
         .orderBy('upvotes', 'desc')
     })
 }

@@ -143,7 +143,8 @@ Users can login to their accounts by hitting this endpoint with USERNAME & PASSW
 
 This endpoint will retrieve all Post Data!
 ```
-[{
+[
+   {
     "id": 1,
     "created_at": "2020-02-27 12:00:00",
     "creator_id": 1,
@@ -151,7 +152,10 @@ This endpoint will retrieve all Post Data!
     "desc": "On Main Street, there's a few down Power Lines from the storm the other night blocking the main roads.",
     "upvotes": 10,
     "downvotes": 3,
-    "resolved": "false"
+    "resolved": "false",
+    "zipcode": "37660",
+    "city": "Kingsport",
+    "state": "TN"
   },
   {
     "id": 3,
@@ -161,8 +165,12 @@ This endpoint will retrieve all Post Data!
     "desc": "Power Outage on Justice Street, the whole streets out of power. ",
     "upvotes": 8,
     "downvotes": 0,
-    "resolved": "true"
-  }]
+    "resolved": "true",
+    "zipcode": "37877",
+    "city": "Talbott",
+    "state": "TN"
+  }
+]
 ```
 
 ***
@@ -182,7 +190,10 @@ This endpoint will retrieve a specific posts data.
     "desc": "Pothole on McDonalds lane, just blew a tire driving over it!",
     "upvotes": 5,
     "downvotes": 2,
-    "resolved": "false"
+    "resolved": "false",
+    "zipcode": "37813",
+    "city": "Morristown",
+    "state": "TN"
   }
 ]
 ```
@@ -205,7 +216,10 @@ creator_id should be dynamically included in the request body based on logged in
     "desc": "Pothole on McDonalds lane, just blew a tire driving over it!",
     "upvotes": 5,
     "downvotes": 2,
-    "resolved": "false"
+    "resolved": "false",
+    "zipcode": "37813",
+    "city": "Morristown",
+    "state": "TN"
   }
 ]
 ```
@@ -226,7 +240,10 @@ This endpoint will let you edit posts.
     {
     "title": "Down Power Lines",
     "desc": "On Main Street, there's a few down Power Lines from the storm the other night blocking the main roads.",
-    "resolved": "true"
+    "resolved": "true",
+    "zipcode": "37813",
+    "city": "Morristown",
+    "state": "TN"
   }
 
 ```
