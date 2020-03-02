@@ -23,6 +23,15 @@ exports.up = function(knex) {
 
         posts
         .boolean('resolved')
+
+        posts
+        .string('zipcode', 128)
+
+        posts
+        .string('city', 128)
+
+        posts
+        .string('state', 128)
   
     })
   };
