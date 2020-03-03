@@ -5,6 +5,7 @@ const jwt = require('jsonwebtoken');
 const Users = require('../users/users-model.js');
 const {validateUser} = require ('../users/users-helpers.js');
 
+//Register
 router.post('/register', (req, res) => {
     let user = req.body;
     
@@ -30,8 +31,8 @@ router.post('/register', (req, res) => {
         }
       });
 
-
-    router.post('/login', (req, res) => {
+//Login
+router.post('/login', (req, res) => {
     let { username, password } = req.body;
     
     Users.findBy({ username })
@@ -42,7 +43,8 @@ router.post('/register', (req, res) => {
         //3. send the token to the clinet
         res.status(200).json({
           message: `Welcome, ${user.username}!`,
-          token: token
+          token: token,
+          user_id: user.id
         });
       } else {
         res.status(401).json({ message: 'Invalid Credentials' });
