@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-
+const secret = require('../config/secret');
 const Users = require('../users/users-model.js');
 const {validateUser} = require ('../users/users-helpers.js');
 
@@ -60,10 +60,8 @@ function getJwtToken(user){
       subject: user.id,
       username: user.username
     }
-  
-    const secret = process.env.JWT_SECRET || 'cat0range' //env
-  
-    return jwt.sign(payload, secret)
-  }
 
+
+    return jwt.sign(payload, secret.jwtSecret)
+  }
   module.exports = router;
