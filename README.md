@@ -131,7 +131,8 @@ Users can login to their accounts by hitting this endpoint with USERNAME & PASSW
 ```
 {
   "message": "Welcome, brandy!",
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo1LCJ1c2VybmFtZSI6ImJyYW5keSIsImlhdCI6MTU4MjkzODY1NH0.Gtsg2N4nMz" (fake token)
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo1LCJ1c2VybmFtZSI6ImJyYW5keSIsImlhdCI6MTU4MjkzODY1NH0.Gtsg2N4nMz" (fake token),
+  "user_id": 5
 }
 ```
 
