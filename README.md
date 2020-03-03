@@ -267,3 +267,20 @@ This endpoint will let you delete posts.
 ```
 
 ***
+
+# *IMAGES*
+## POST: /api/posts/:id/image
+`https://comake2.herokuapp.com/api/posts/1/image`
+
+This endpoint will let you upload .jpg / .jpeg images to your Posts. 
+Images can be viewed in this Repo by navigating to the 'public' folder, and then the 'uploads' folder.
+The URL should return in your console.
+```
+Key: "Image" (File Type, not Text Type)
+Value: "issue-1.jpg"
+
+will return 
+{
+    "Url": "https://comake2.herokuapp.com/api/posts/1/image/issue-1.jpg"
+}
+```

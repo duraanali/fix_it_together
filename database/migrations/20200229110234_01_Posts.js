@@ -32,6 +32,9 @@ exports.up = function(knex) {
 
         posts
         .string('state', 128)
+
+        posts
+        .string('image')
   
     })
   };
