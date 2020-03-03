@@ -66,6 +66,10 @@ Returns:
 # *EDIT A SPECIFIC USER*
 ## PUT: /api/users/:id
 `https://comake2.herokuapp.com/api/users/1`
+## RESTRICTED: REQUIRES HEADER
+```
+authorization: token
+```
 
 Will edit & update that specified Users information. (Ex. Username, Password, etc)
 ```
@@ -82,6 +86,10 @@ Returns:
 # *DELETE A SPECIFIC USER*
 ## DELETE: /api/users/:id
 `https://comake2.herokuapp.com/api/users/1`
+## RESTRICTED: REQUIRES HEADER
+```
+authorization: token
+```
 
 Will delete that specified User
 ```
@@ -204,6 +212,10 @@ This endpoint will retrieve a specific posts data.
 # *POSTS*
 ## POST: /api/posts/
 `https://comake2.herokuapp.com/api/posts`
+## RESTRICTED: REQUIRES HEADER
+```
+authorization: token
+```
 
 This endpoint will let you add new Posts to the DataBase! You have to be logged in to create a post.
 
@@ -231,6 +243,10 @@ creator_id should be dynamically included in the request body based on logged in
 # *POSTS*
 ## PUT: /api/posts/:id
 `https://comake2.herokuapp.com/api/posts/1`
+## RESTRICTED: REQUIRES HEADER
+```
+authorization: token
+```
 
 This endpoint will let you edit posts.
 
@@ -254,6 +270,10 @@ This endpoint will let you edit posts.
 # *POSTS*
 ## DELETE: /api/posts/:id
 `https://comake2.herokuapp.com/api/posts/7`
+## RESTRICTED: REQUIRES HEADER
+```
+authorization: token
+```
 
 This endpoint will let you delete posts.
 

@@ -2,8 +2,7 @@ const router = require('express').Router()
 const Posts = require('./posts-model.js');
 const multer = require('multer')
 const path = require('path');
-
-
+const restricted = require('../auth/restricted-middleware');
 
 //Multer DiskStorage (where to store)
 const storage = multer.diskStorage({
@@ -68,7 +67,7 @@ router.get('/:id', (req, res) => {
 
 //POST a post
 //POST /posts
-router.post('/', (req, res) => {
+router.post('/', restricted,  (req, res) => {
     const postData = req.body;
     Posts
     .add(postData)
@@ -82,7 +81,7 @@ router.post('/', (req, res) => {
 
   //PUT a Post ID
   //PUT /post/:id
-  router.put('/:id', (req,res) =>{
+  router.put('/:id', restricted,  (req,res) =>{
     const postData = req.body;
     Posts
     .update(req.params.id, postData)
@@ -96,7 +95,7 @@ router.post('/', (req, res) => {
 
   //DELETE a Post ID
   //DELETE /posts/:id
-    router.delete('/:id', (req, res) => {
+    router.delete('/:id', restricted, (req, res) => {
     Posts.remove(req.params.id)
     .then(count => {
       if (count > 0) {

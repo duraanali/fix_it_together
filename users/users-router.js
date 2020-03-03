@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const Users = require('./users-model.js');
 const Posts = require('../posts/posts-model.js')
+const restricted = require('../auth/restricted-middleware');
 
 //GET a list of Users
 //GET /users/
@@ -45,7 +46,7 @@ router.post('/', (req, res) => {
 
   //PUT a User ID
   //PUT /users/:id
-  router.put('/:id', (req,res) =>{
+  router.put('/:id', restricted, (req,res) =>{
     const userData = req.body;
     Users
     .update(userData, req.params.id)
@@ -59,7 +60,7 @@ router.post('/', (req, res) => {
 
   //DELETE a User ID
   //DELETE /users/:id
-    router.delete('/:id', (req, res) => {
+    router.delete('/:id', restricted, (req, res) => {
     Users.remove(req.params.id)
     .then(count => {
       if (count > 0) {
