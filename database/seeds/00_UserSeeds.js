@@ -15,10 +15,12 @@ exports.seed = function(knex) {
 
 // {username: "", password: "", created_at: "", first_name:"", last_name:"", email:"", prize_points:"", zipcode: "", city:"", state:""}
 // {username: "joker", password: "harley", created_at: "2020-02-29 00:35:00", first_name:"Joker", last_name:"", email:"jokerman@gmail.com", prize_points:"10", zipcode: "47130", city:"Jeffresonville", state:"IN"}
+
 /*
 
 superman : batman
 joker : harley
 username : password
 mario : bowser
+
 */
