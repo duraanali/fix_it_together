@@ -51,11 +51,12 @@ Returns:
       "id": 1,
       "created_at": "2020-02-27 12:00:00",
       "creator_id": 1,
-      "title": "Down Power Lines222222",
+      "title": "Down Power Lines",
       "desc": "On Main Street, there's a few down Power Lines from the storm the other night blocking the main roads.",
       "upvotes": 10,
       "downvotes": 3,
-      "resolved": "true"
+      "resolved": "false",
+      "creator_name": "superman"
     }
   ]
 }
@@ -164,7 +165,8 @@ This endpoint will retrieve all Post Data!
     "resolved": "false",
     "zipcode": "37660",
     "city": "Kingsport",
-    "state": "TN"
+    "state": "TN",
+    "creator_name": "superman"
   },
   {
     "id": 3,
@@ -177,7 +179,8 @@ This endpoint will retrieve all Post Data!
     "resolved": "true",
     "zipcode": "37877",
     "city": "Talbott",
-    "state": "TN"
+    "state": "TN",
+    "creator_name": "superman"
   }
 ]
 ```
@@ -186,23 +189,24 @@ This endpoint will retrieve all Post Data!
 
 # *POSTS*
 ## GET: /api/posts/:id
-`https://comake2.herokuapp.com/api/posts/2`
+`https://comake2.herokuapp.com/api/posts/1`
 
 This endpoint will retrieve a specific posts data.
 ```
 [
   {
-    "id": 2,
-    "created_at": "2020-02-28 3:00:00",
-    "creator_id": 2,
-    "title": "Pot Hole Alert",
-    "desc": "Pothole on McDonalds lane, just blew a tire driving over it!",
-    "upvotes": 5,
-    "downvotes": 2,
+    "id": 1,
+    "created_at": "2020-02-27 12:00:00",
+    "creator_id": 1,
+    "title": "Down Power Lines",
+    "desc": "On Main Street, there's a few down Power Lines from the storm the other night blocking the main roads.",
+    "upvotes": 10,
+    "downvotes": 3,
     "resolved": "false",
-    "zipcode": "37813",
-    "city": "Morristown",
-    "state": "TN"
+    "zipcode": "37660",
+    "city": "Kingsport",
+    "state": "TN",
+    "creator_name": "superman"
   }
 ]
 ```

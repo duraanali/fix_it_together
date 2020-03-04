@@ -12,15 +12,17 @@ module.exports = {
 //Find Posts
 function find(){
     return db("posts")
-    .select('id', 'created_at', 'creator_id', 'title', 'desc', 'upvotes', 'downvotes', 'resolved', 'zipcode', 'city', 'state')
+    .join('users', 'posts.creator_id', 'users.id')
+    .select('posts.id', 'posts.created_at', 'posts.creator_id', 'posts.title', 'posts.desc', 'posts.upvotes', 'posts.downvotes', 'posts.resolved', 'posts.zipcode', 'posts.city', 'posts.state', 'users.username as creator_name')
     .orderBy('upvotes', 'desc')
 }
 
 
 function findById(id) {
     return db('posts')
-    .where({id})
-    .select('id', 'created_at', 'creator_id', 'title', 'desc', 'upvotes', 'downvotes', 'resolved', 'zipcode', 'city', 'state')
+    .join('users', 'posts.creator_id', 'users.id')
+    .where('posts.id', id)
+    .select('posts.id', 'posts.created_at', 'posts.creator_id', 'posts.title', 'posts.desc', 'posts.upvotes', 'posts.downvotes', 'posts.resolved', 'posts.zipcode', 'posts.city', 'posts.state', 'users.username as creator_name')
     .orderBy('upvotes', 'desc')
 }
 
@@ -29,7 +31,7 @@ async function findPostsByUserId(id){
     return await db('posts')
     .join('users', 'posts.creator_id', 'users.id')
     .where('users.id', id)
-    .select('posts.id', 'posts.created_at', 'posts.creator_id', 'posts.title', 'posts.desc', 'posts.upvotes', 'posts.downvotes', 'posts.resolved')
+    .select('posts.id', 'posts.created_at', 'posts.creator_id', 'posts.title', 'posts.desc', 'posts.upvotes', 'posts.downvotes', 'posts.resolved', 'users.username as creator_name')
 }
 
 //Add Users Post
