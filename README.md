@@ -1,6 +1,10 @@
 # Co-Make API
 Note: Passwords will never be returned for Safety Reasons.  
 
+If you're interested in trying to install the dependencies, run the server, and test the tests locally, feel free to check out [STARTHERE.md](/STARTHERE.md)
+
+***
+
 # *API OFFLINE/ONLINE*
 ## GET: /
 `https://comake2.herokuapp.com/`
