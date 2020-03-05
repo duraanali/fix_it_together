@@ -253,6 +253,7 @@ authorization: token
 ```
 
 This endpoint will let you edit posts.
+"creator_id" is notNullable()
 
 ```
 
@@ -264,7 +265,8 @@ This endpoint will let you edit posts.
     "resolved": "true",
     "zipcode": "37813",
     "city": "Morristown",
-    "state": "TN"
+    "state": "TN",
+    "creator_id": "1";
   }
 
 ```
