@@ -48,6 +48,22 @@ module.exports = {
     migrations: {
       tableName: 'knex_migrations'
     }
+  },
+
+  testing: {
+    client: "sqlite3",
+    connection: {
+      filename: './database/CoMake.sqlite3'
+    },
+    useNullAsDefault: true,
+
+    migrations: {
+        directory: "./database/migrations"
+    },
+
+    seeds: {
+        directory: "./database/seeds"
+    }
   }
 
 };

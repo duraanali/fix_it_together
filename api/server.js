@@ -19,6 +19,7 @@ server.use(express.static(path.join(__dirname, "public")));
 server.use(express.static(path.join(__dirname, "uploads")));
 
 server.get('/', (req, res) => {
+    res.json({message: "🗡 ==={ The API that you seek is running 🔥😎🎉}===🗡"}),
     res.send('🗡 ==={ The API that you seek is running 🔥😎🎉}===🗡')
 })
 
