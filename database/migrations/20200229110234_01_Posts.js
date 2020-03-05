@@ -8,6 +8,7 @@ exports.up = function(knex) {
 
         posts
         .integer('creator_id').references('id').inTable('users').onDelete('CASCADE').onUpdate('CASCADE')
+        .notNullable()
 
         posts
         .string('title').notNullable()
