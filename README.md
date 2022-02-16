@@ -1,20 +1,6 @@
-# Co-Make API
-Note: Passwords will never be returned for Safety Reasons.  
+# Gabi School Build Week
+# FIX IT TOGETHER 
 
-If you're interested in trying to install the dependencies, run the server, and test the tests locally, feel free to check out [STARTHERE.md](/STARTHERE.md)
-
-***
-
-# *API OFFLINE/ONLINE*
-## GET: /
-`https://comake2.herokuapp.com/`
-
-A single "/" will redirect you to a message if the API is running:
-```
-🗡 ==={ The API that you seek is running 🔥😎🎉}===🗡
-```
-
-***
 
 # *USERS LIST*
 ## GET: /api/users
@@ -108,13 +94,14 @@ Returns:
 ***
 
 # *REGISTER*
+
 ## POST: /api/auth/register
 `https://comake2.herokuapp.com/api/auth/register`
 
 Users can create accounts by hitting this endpoint. USERNAME and PASSWORD are required.
 
-Usernames MUST be at LEAST 3 characters long. Usernames MUST be Unique (No 2 people can have the same Username).
-Passwords MUST be at LEAST 4 characters long. 
+Usernames MUST be at LEAST 3 characters long. Usernames MUST be Unique (No 2 people can have the same Username). Passwords MUST be at LEAST 4 characters long. 
+
 ```
 {
     "username": "brandy",
@@ -137,10 +124,12 @@ Available Fields:
 ***
 
 # *LOGIN*
+
 ## POST: /api/auth/login
 `https://comake2.herokuapp.com/api/auth/login`
 
 Users can login to their accounts by hitting this endpoint with USERNAME & PASSWORD. User will recieve a message from the BackEnd saying "Welcome, {username}!", along with their token.
+
 ```
 {
   "message": "Welcome, brandy!",
@@ -152,6 +141,7 @@ Users can login to their accounts by hitting this endpoint with USERNAME & PASSW
 ***
 
 # *POSTS*
+
 ## GET: /api/posts
 `https://comake2.herokuapp.com/api/posts`
 
@@ -192,6 +182,7 @@ This endpoint will retrieve all Post Data!
 ***
 
 # *POSTS*
+
 ## GET: /api/posts/:id
 `https://comake2.herokuapp.com/api/posts/1`
 
@@ -218,6 +209,7 @@ This endpoint will retrieve a specific posts data.
 ***
 
 # *POSTS*
+
 ## POST: /api/posts/
 `https://comake2.herokuapp.com/api/posts`
 ## RESTRICTED: REQUIRES HEADER
@@ -249,6 +241,7 @@ creator_id should be dynamically included in the request body based on logged in
 
 
 # *POSTS*
+
 ## PUT: /api/posts/:id
 `https://comake2.herokuapp.com/api/posts/1`
 ## RESTRICTED: REQUIRES HEADER
@@ -278,6 +271,7 @@ This endpoint will let you edit posts.
 ***
 
 # *POSTS*
+
 ## DELETE: /api/posts/:id
 `https://comake2.herokuapp.com/api/posts/7`
 ## RESTRICTED: REQUIRES HEADER

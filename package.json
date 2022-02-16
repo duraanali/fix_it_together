@@ -1,5 +1,5 @@
 {
-  "name": "web4-node-backend",
+  "name": "fix_it_together",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Co-Make-2-BW/web4-node-backend.git"
+    "url": ""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Co-Make-2-BW/web4-node-backend/issues"
+    "url": "https://github.com/duraanali"
   },
-  "homepage": "https://github.com/Co-Make-2-BW/web4-node-backend#readme",
+  "homepage": "https://github.com/duraanali",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
