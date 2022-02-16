@@ -4,7 +4,7 @@
 
 # *USERS LIST*
 ## GET: /api/users
-`https://comake2.herokuapp.com/api/users`
+`https://fixittogether.herokuapp.com/api/users`
 
 Will retrieve a list of ALL users.
 ```
@@ -26,7 +26,7 @@ Will retrieve a list of ALL users.
 
 # *SPECIFIC USER*
 ## GET: /api/users/:id
-`https://comake2.herokuapp.com/api/users/1`
+`https://fixittogether.herokuapp.com/api/users/1`
 
 Will retrieve that specified Users information AND any posts that Users created.
 ```
@@ -56,7 +56,7 @@ Returns:
 
 # *EDIT A SPECIFIC USER*
 ## PUT: /api/users/:id
-`https://comake2.herokuapp.com/api/users/1`
+`https://fixittogether.herokuapp.com/api/users/1`
 ## RESTRICTED: REQUIRES HEADER
 ```
 authorization: token
@@ -76,7 +76,7 @@ Returns:
 
 # *DELETE A SPECIFIC USER*
 ## DELETE: /api/users/:id
-`https://comake2.herokuapp.com/api/users/1`
+`https://fixittogether.herokuapp.com/api/users/1`
 ## RESTRICTED: REQUIRES HEADER
 ```
 authorization: token
@@ -96,7 +96,7 @@ Returns:
 # *REGISTER*
 
 ## POST: /api/auth/register
-`https://comake2.herokuapp.com/api/auth/register`
+`https://fixittogether.herokuapp.com/api/auth/register`
 
 Users can create accounts by hitting this endpoint. USERNAME and PASSWORD are required.
 
@@ -126,7 +126,7 @@ Available Fields:
 # *LOGIN*
 
 ## POST: /api/auth/login
-`https://comake2.herokuapp.com/api/auth/login`
+`https://fixittogether.herokuapp.com/api/auth/login`
 
 Users can login to their accounts by hitting this endpoint with USERNAME & PASSWORD. User will recieve a message from the BackEnd saying "Welcome, {username}!", along with their token.
 
@@ -143,7 +143,7 @@ Users can login to their accounts by hitting this endpoint with USERNAME & PASSW
 # *POSTS*
 
 ## GET: /api/posts
-`https://comake2.herokuapp.com/api/posts`
+`https://fixittogether.herokuapp.com/api/posts`
 
 This endpoint will retrieve all Post Data!
 ```
@@ -184,7 +184,7 @@ This endpoint will retrieve all Post Data!
 # *POSTS*
 
 ## GET: /api/posts/:id
-`https://comake2.herokuapp.com/api/posts/1`
+`https://fixittogether.herokuapp.com/api/posts/1`
 
 This endpoint will retrieve a specific posts data.
 ```
@@ -211,7 +211,7 @@ This endpoint will retrieve a specific posts data.
 # *POSTS*
 
 ## POST: /api/posts/
-`https://comake2.herokuapp.com/api/posts`
+`https://fixittogether.herokuapp.com/api/posts`
 ## RESTRICTED: REQUIRES HEADER
 ```
 authorization: token
@@ -243,7 +243,7 @@ creator_id should be dynamically included in the request body based on logged in
 # *POSTS*
 
 ## PUT: /api/posts/:id
-`https://comake2.herokuapp.com/api/posts/1`
+`https://fixittogether.herokuapp.com/api/posts/1`
 ## RESTRICTED: REQUIRES HEADER
 ```
 authorization: token
@@ -273,7 +273,7 @@ This endpoint will let you edit posts.
 # *POSTS*
 
 ## DELETE: /api/posts/:id
-`https://comake2.herokuapp.com/api/posts/7`
+`https://fixittogether.herokuapp.com/api/posts/7`
 ## RESTRICTED: REQUIRES HEADER
 ```
 authorization: token
@@ -295,7 +295,7 @@ This endpoint will let you delete posts.
 
 # *IMAGES*
 ## POST: /api/posts/:id/image
-`https://comake2.herokuapp.com/api/posts/1/image`
+`https://fixittogether.herokuapp.com/api/posts/1/image`
 
 This endpoint will let you upload .jpg / .jpeg images to your Posts. 
 Images can be viewed in this Repo by navigating to the 'public' folder, and then the 'uploads' folder.
@@ -306,6 +306,6 @@ Value: "issue-1.jpg"
 
 will return 
 {
-    "Url": "https://comake2.herokuapp.com/api/posts/1/image/issue-1.jpg"
+    "Url": "https://fixittogether.herokuapp.com/api/posts/1/image/issue-1.jpg"
 }
 ```
