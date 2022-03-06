@@ -3,7 +3,6 @@ const secret = require("../config/secret.js");
 
 module.exports = (req, res, next) => {
   const token = req.headers.authorization;
-
   if (token) {
     next();
   } else if (token) {

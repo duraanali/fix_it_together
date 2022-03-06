@@ -5,7 +5,7 @@ const restricted = require('../auth/restricted-middleware');
 
 //GET a list of Users
 //GET /users/
-router.get('/', (req, res) => {
+router.get('/', restricted, (req, res) => {
  Users.find()
  .then(users => {
      res.json(users);
@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
 
 //GET a specific Users ID
 //GET /users/:id
-router.get('/:id', async (req, res) => {
+router.get('/:id', restricted, async (req, res) => {
   const userId = req.params.id
   try{
     const user = await Users.findById(userId)
@@ -32,7 +32,7 @@ router.get('/:id', async (req, res) => {
 
 //POST a User
 //POST /users
-router.post('/', (req, res) => {
+router.post('/', restricted, (req, res) => {
     const userData = req.body;
     Users
     .add(userData)
