@@ -5,6 +5,10 @@
 # *USERS LIST*
 ## GET: /api/users
 `https://fixittogether.herokuapp.com/api/users`
+## RESTRICTED: REQUIRES HEADER
+```
+authorization: token
+```
 
 Will retrieve a list of ALL users.
 ```
@@ -27,6 +31,10 @@ Will retrieve a list of ALL users.
 # *SPECIFIC USER*
 ## GET: /api/users/:id
 `https://fixittogether.herokuapp.com/api/users/1`
+## RESTRICTED: REQUIRES HEADER
+```
+authorization: token
+```
 
 Will retrieve that specified Users information AND any posts that Users created.
 ```
